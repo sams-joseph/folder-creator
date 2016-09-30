@@ -41,9 +41,9 @@ def create_folders(event):
                         os.makedirs(newpath + '/prep_art')
                         os.makedirs(newpath + '/prep_art/LOW')
                 count = count + 1
+            btn_canvas.itemconfig(selected_dir_label, text='Folders created successfully.')
         else:
-            print 'Too many parts.'
-        print 'Folders created successfully'
+            btn_canvas.itemconfig(selected_dir_label, text='You have selected too many parts')
     except NameError:
         tkMessageBox.showerror('Error!', 'Please select a directory')
 
