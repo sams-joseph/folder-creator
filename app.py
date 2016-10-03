@@ -50,10 +50,18 @@ def create_folders(event):
 
 def clear_num_field(event):
     number_field.delete(0, END)
+    try:
+        btn_canvas.itemconfig(selected_dir_label, text=directory)
+    except NameError:
+        btn_canvas.itemconfig(selected_dir_label, text='')
     return
 
 def clear_part_field(event):
     part_field.delete(0, END)
+    try:
+        btn_canvas.itemconfig(selected_dir_label, text=directory)
+    except NameError:
+        btn_canvas.itemconfig(selected_dir_label, text='')
     return
 
 def select_dir(event):
